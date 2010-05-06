@@ -23,25 +23,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: 02_blinky2.axf
+all: libCMSISv1p30_LPC11xx.a
 
 # Tool invocations
-02_blinky2.axf: $(OBJS) $(USER_OBJS)
+libCMSISv1p30_LPC11xx.a: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"..\..\lib" -Xlinker -Map=02_blinky2.map -mcpu=cortex-m0 -mthumb -T "02_blinky2_Debug.ld" -o"02_blinky2.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Invoking: MCU Archiver'
+	arm-none-eabi-ar -r "libCMSISv1p30_LPC11xx.a" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) 02_blinky2.axf
+	-$(RM) $(OBJS)$(C_DEPS)$(ARCHIVES) libCMSISv1p30_LPC11xx.a
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size 02_blinky2.axf; # arm-none-eabi-objcopy -O binary 02_blinky2.axf 02_blinky2.bin ; checksum -d 02_blinky2.bin;
+	-arm-none-eabi-size libCMSISv1p30_LPC11xx.a ; # arm-none-eabi-objdump -h -S libCMSISv1p30_LPC11xx.a >libCMSISv1p30_LPC11xx.lss
 	-@echo ' '
 
 .PHONY: all clean dependents
