@@ -1,10 +1,11 @@
 /*
 ===============================================================================
  Name        : main.c
- Author      : 
+ Author      : Boseji
  Version     :
- Copyright   : (C) Copyright
- Description : main definition
+ Copyright   : Boseji (C) Copyright 2010 All rights reserved.
+ Description : Clock output with System Clock Predefined using SystemInit()
+               Function from the CMSIS lib
 ===============================================================================
 */
 #define __USE_CMSIS
