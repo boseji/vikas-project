@@ -39,50 +39,30 @@ int main(void) {
 	long unsigned int i = 0 ;
 	//SystemInit(); //System Clock at 48MHz Can be used By default no need to enable this
 	//Initialized External XTAL clock
-	{
-	  SYSCLK_ExternalOscillator_ON();
-	  SYSCLK_PLL_Source(SYSCLK_PLL_SRC_EXTOSC);
-	  SYSCLK_PLL_Config(3,0);
-	  SYSCLK_PLL_ON();
-	  SYSCLK_MainClock_Source(SYSCLK_MainClock_SRC_PLLINOSC);
+	SYSCLK_Setup_24MHzExternalOscillatorPLL();
 
-	/**
-	 * Check which Peripherals need AHB clock to be ON
-	 * Bit 0 - SYS AHBtoAPB bridge,AHB Matrix, Cortex-M0 FCLK & HCLK, SysCon, PMU
-	 * Bit 1 - ROM
-	 * Bit 2 - RAM
-	 * Bit 3 - Flash Register Interface
-	 * Bit 4 - Flash Array
-	 * Bit 5 - I2C
-	 * Bit 6 - GPIO
-	 * Bit 7 - CT16B0
-	 * Bit 8 - CT16B1
-	 * Bit 9 - CT32B0
-	 * Bit 10 - CT32B1
-	 * Bit 11 - SSP0 - SPI 0
-	 * Bit 12 - UART
-	 * Bit 13 - ADC
-	 * Bit 14 - Reserved
-	 * Bit 15 - WDT
-	 * Bit 16 - IOCON - I/O Configuration Block
-	 * Bit 17 - Reserved
-	 * Bit 18 - SSP1 0 SPI1
-	 */
-	//LPC_SYSCON->SYSAHBCLKCTRL = AHBCLKCTRL_Val;
-	}
 	/* Enable AHB clock to the GPIO domain. */
 	  LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6); //Enable the I/O Clock
 	  LPC_GPIO0->DIR |= BV(7);
 	  LPC_GPIO0->DATA |= BV(7);
 
-	  CLKOUT_Setup(3);
-	// Enter an infinite loop, just incrementing a counter
+	  if(LPC_SYSCON->SYSRESSTAT&4)
+		  while(1)
+			  __NOP();
 
+	  SYSCLK_CLKOUTDIV(4);
+	  CLKOUT_Config(CLKOUT_SRC_MCLK);
+	  WDT_Clock_Source(WDT_SRC_IRCOSC);
+	  SYSCLK_WDTDIV(50);
+	  WDT_Config(1,0,0xFF);
+	  WDT_Reset();
+	// Enter an infinite loop, just incrementing a counter
+__NOP();
 	while(1) {
-			i++ ;
-			if(i==1000000)
+			i++ ;//WDT_Reset();
+			if((i==1000000))
 			{
-			i=0;
+			i=0;WDT_Reset();
 			LPC_GPIO0->DATA ^= BV(7);
 			}
 	}
