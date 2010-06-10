@@ -29,6 +29,7 @@
 </option>
 <option id="gnu.c.compiler.option.preprocessor.def.symbols.1811105821" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 <listOptionValue builtIn="false" value="__USE_CMSIS=CMSISv1p30_LPC11xx"/>
+<listOptionValue builtIn="false" value="F_AHB=24000000UL"/>
 <listOptionValue builtIn="false" value="DEBUG"/>
 <listOptionValue builtIn="false" value="__CODE_RED"/>
 </option>
