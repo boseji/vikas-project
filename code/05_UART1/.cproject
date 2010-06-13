@@ -24,7 +24,7 @@
 <tool id="com.crt.advproject.cpp.exe.debug.1548618789" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.debug"/>
 <tool id="com.crt.advproject.gcc.exe.debug.121540777" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug">
 <option id="gnu.c.compiler.option.include.paths.1142890803" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CMSISv1p30_LPC11xx/inc}&quot;"/>
+<listOptionValue builtIn="false" value="../../inc"/>
 <listOptionValue builtIn="false" value="&quot;${workspace_loc:/04_clockconf2/src}&quot;"/>
 </option>
 <option id="gnu.c.compiler.option.preprocessor.def.symbols.1811105821" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
@@ -53,7 +53,7 @@
 <listOptionValue builtIn="false" value="CMSISv1p30_LPC11xx"/>
 </option>
 <option id="gnu.c.link.option.paths.1849142445" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
-<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CMSISv1p30_LPC11xx/Release}&quot;"/>
+<listOptionValue builtIn="false" value="../../lib"/>
 </option>
 <option id="com.crt.advproject.link.arch.575292450" name="Architecture" superClass="com.crt.advproject.link.arch" value="com.crt.advproject.link.target.cm0" valueType="enumerated"/>
 <option id="com.crt.advproject.link.thumb.1279386029" name="Thumb mode" superClass="com.crt.advproject.link.thumb" value="true" valueType="boolean"/>
