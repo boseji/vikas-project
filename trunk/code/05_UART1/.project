@@ -3,7 +3,6 @@
 	<name>05_UART1</name>
 	<comment></comment>
 	<projects>
-		<project>CMSISv1p30_LPC11xx</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
