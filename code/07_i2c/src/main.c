@@ -4,17 +4,23 @@
  Author      : Boseji
  Version     :
  Copyright   : Boseji (C) Copyright 2010 All rights reserved.
- Description : main definition
+ Description : EEPROM is 24LC16 on I2C
 ===============================================================================
 */
 #include "LPC11xx.h"
+#include "type.h"
 #include "clock.h"
 #include "uart.h"
+#include "i2c.h"
 #define BV(X) (1<<X)
 #define __KEY_DEBUG
+#define I2C_ADDR(blk,wr) (0xA0|((blk&0x07)<<1)|(wr&1))
+
 uint8_t data[]={"Aum Sri Ganeshay Namh\n\r"};
 uint32_t key;
 void KeyScan();
+void eeprom_write(uint16_t addr,uint8_t data);
+void eeprom_read(uint16_t addr,uint8_t len);
 int main(void) {
 	long unsigned int i = 0 ;
 
@@ -23,7 +29,7 @@ int main(void) {
 	SYSCLK_Enable(SYSCLK_Active_GPIO); //Enable the I/O Clock
 	LPC_GPIO0->DIR |= BV(7);
 	LPC_GPIO0->DATA |= BV(7);
-	
+
 	//Key Config
 	// R0-P3.0 R1-P3.1 R2-P3.2 R3-P3.3
 	LPC_GPIO3->DIR |= BV(0)+BV(1)+BV(2)+BV(3);
@@ -36,10 +42,14 @@ int main(void) {
 	CLKOUT_Config(CLKOUT_SRC_MCLK);
 
 	UARTInit(1,9600);
+	if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
+	  {
+		while ( 1 );				/* Fatal error */
+	  }
 	while(1)
 	{
 		i++ ;//WDT_Reset();
-		if((i==1000000))
+		if((i==100000))
 		{
 			i=0;
 			LPC_GPIO0->DATA ^= BV(7);
@@ -49,6 +59,9 @@ int main(void) {
 		if((i%10000)==0)
 		{
 		 KeyScan();
+		eeprom_write(0x110,0x15);
+    	{uint32_t i;for (i = 0; i < 0x200000; i++ );	/* Delay after write */}
+    	eeprom_read(0x110,4);
 		}
 	}
 	return 0 ;
@@ -106,3 +119,21 @@ void KeyScan()
 	#endif
 			key |= col<<12;
 }
+void eeprom_write(uint16_t addr,uint8_t data){
+		 /* Write SLA(W), address and one data byte */
+		   I2CWriteLength = 3;
+		   I2CReadLength = 0;
+		   I2CMasterBuffer[0] = I2C_ADDR((addr>>8),0);
+		   I2CMasterBuffer[1] = addr&0x0ff;		/* address */
+		   I2CMasterBuffer[2] = data;		/* Data0 */
+		   I2CEngine();
+		 }
+void eeprom_read(uint16_t addr,uint8_t len){
+    	/* Write SLA(W), address, SLA(R), and read one byte back. */
+		   I2CWriteLength = 2;
+		   I2CReadLength = len;
+		   I2CMasterBuffer[0] = I2C_ADDR((addr>>8),0);
+		   I2CMasterBuffer[1] = (addr&0x0ff);		/* address */
+		   I2CMasterBuffer[2] = I2C_ADDR(0,1);
+		   I2CEngine();
+	   }
