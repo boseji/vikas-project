@@ -7,11 +7,11 @@
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
-<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList&gt;&lt;content id=&quot;I2CSlaveBuffer[0]-I2CSlaveBuffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;I2CMasterBuffer[2]-null-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;I2CMasterBuffer[0]-null-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;I2CMasterBuffer[2]-I2CMasterBuffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;I2CMasterBuffer[1]-I2CMasterBuffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;I2CMasterBuffer[0]-I2CMasterBuffer--(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;null-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;I2CMasterBuffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;/contentList&gt;"/>
-<stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;globalVariableList&gt;&#13;&#10;&lt;globalVariable name=&quot;RdIndex&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;globalVariable name=&quot;WrIndex&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;globalVariable name=&quot;I2CSlaveBuffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;globalVariable name=&quot;I2CMasterBuffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;/globalVariableList&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList&gt;&lt;content id=&quot;I2CSlaveBuffer[0]-I2CSlaveBuffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;/contentList&gt;"/>
+<stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;globalVariableList&gt;&#13;&#10;&lt;globalVariable name=&quot;I2CSlaveBuffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;/globalVariableList&gt;&#13;&#10;"/>
 <stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList/&gt;&#13;&#10;"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\07_i2c.axf"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="07_i2c"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.crt.advproject.config.exe.debug.1011099901"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\08_Nokia3310LCD.axf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="08_Nokia3310LCD"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.crt.advproject.config.exe.debug.930449371"/>
 <booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="false"/>
 </launchConfiguration>
