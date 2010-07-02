@@ -54,7 +54,7 @@ END GROUP
                 0x00008000                __top_MFlash32 = 0x8000
                 0x10002000                __top_RamLoc8 = 0x10002000
 
-.text           0x00000000     0x2238
+.text           0x00000000     0x2254
  *(.isr_vector)
  .isr_vector    0x00000000       0xc0 ./src/cr_startup_lpc11.o
                 0x00000000                g_pfnVectors
@@ -70,296 +70,296 @@ END GROUP
                 0x00000150       0xcc ./src/N3310.o
                 0x00000150                N3310_fbCh
  .text.N3310_fbWrite
-                0x0000021c       0x70 ./src/N3310.o
+                0x0000021c       0x88 ./src/N3310.o
                 0x0000021c                N3310_fbWrite
  .text.N3310_writeb
-                0x0000028c       0x24 ./src/N3310.o
-                0x0000028c                N3310_writeb
+                0x000002a4       0x24 ./src/N3310.o
+                0x000002a4                N3310_writeb
  .text.N3310_putpx
-                0x000002b0       0x48 ./src/N3310.o
-                0x000002b0                N3310_putpx
+                0x000002c8       0x48 ./src/N3310.o
+                0x000002c8                N3310_putpx
  .text.N3310_setXY
-                0x000002f8       0x48 ./src/N3310.o
-                0x000002f8                N3310_setXY
+                0x00000310       0x48 ./src/N3310.o
+                0x00000310                N3310_setXY
  .text.N3310_fbDisplay
-                0x00000340       0x5c ./src/N3310.o
-                0x00000340                N3310_fbDisplay
+                0x00000358       0x5c ./src/N3310.o
+                0x00000358                N3310_fbDisplay
  .text.N3310_clr
-                0x0000039c       0x28 ./src/N3310.o
-                0x0000039c                N3310_clr
+                0x000003b4       0x28 ./src/N3310.o
+                0x000003b4                N3310_clr
  .text.N3310_init
-                0x000003c4       0x7c ./src/N3310.o
-                0x000003c4                N3310_init
- .text          0x00000440        0x0 ./src/cr_startup_lpc11.o
+                0x000003dc       0x7c ./src/N3310.o
+                0x000003dc                N3310_init
+ .text          0x00000458        0x0 ./src/cr_startup_lpc11.o
  .text.NMI_Handler
-                0x00000440        0x4 ./src/cr_startup_lpc11.o
-                0x00000440                NMI_Handler
+                0x00000458        0x4 ./src/cr_startup_lpc11.o
+                0x00000458                NMI_Handler
  .text.HardFault_Handler
-                0x00000444        0x4 ./src/cr_startup_lpc11.o
-                0x00000444                HardFault_Handler
+                0x0000045c        0x4 ./src/cr_startup_lpc11.o
+                0x0000045c                HardFault_Handler
  .text.SVCall_Handler
-                0x00000448        0x4 ./src/cr_startup_lpc11.o
-                0x00000448                SVCall_Handler
+                0x00000460        0x4 ./src/cr_startup_lpc11.o
+                0x00000460                SVCall_Handler
  .text.PendSV_Handler
-                0x0000044c        0x4 ./src/cr_startup_lpc11.o
-                0x0000044c                PendSV_Handler
+                0x00000464        0x4 ./src/cr_startup_lpc11.o
+                0x00000464                PendSV_Handler
  .text.SysTick_Handler
-                0x00000450        0x4 ./src/cr_startup_lpc11.o
-                0x00000450                SysTick_Handler
+                0x00000468        0x4 ./src/cr_startup_lpc11.o
+                0x00000468                SysTick_Handler
  .text.IntDefaultHandler
-                0x00000454        0x4 ./src/cr_startup_lpc11.o
-                0x00000454                TIMER16_0_IRQHandler
-                0x00000454                TIMER32_0_IRQHandler
-                0x00000454                TIMER32_1_IRQHandler
-                0x00000454                IntDefaultHandler
-                0x00000454                PIOINT1_IRQHandler
-                0x00000454                TIMER16_1_IRQHandler
-                0x00000454                USB_FIQHandler
-                0x00000454                ADC_IRQHandler
-                0x00000454                PIOINT2_IRQHandler
-                0x00000454                USB_IRQHandler
-                0x00000454                BOD_IRQHandler
-                0x00000454                WAKEUP_IRQHandler
-                0x00000454                PIOINT0_IRQHandler
-                0x00000454                WDT_IRQHandler
-                0x00000454                PIOINT3_IRQHandler
-                0x00000454                FMC_IRQHandler
+                0x0000046c        0x4 ./src/cr_startup_lpc11.o
+                0x0000046c                TIMER16_0_IRQHandler
+                0x0000046c                TIMER32_0_IRQHandler
+                0x0000046c                TIMER32_1_IRQHandler
+                0x0000046c                IntDefaultHandler
+                0x0000046c                PIOINT1_IRQHandler
+                0x0000046c                TIMER16_1_IRQHandler
+                0x0000046c                USB_FIQHandler
+                0x0000046c                ADC_IRQHandler
+                0x0000046c                PIOINT2_IRQHandler
+                0x0000046c                USB_IRQHandler
+                0x0000046c                BOD_IRQHandler
+                0x0000046c                WAKEUP_IRQHandler
+                0x0000046c                PIOINT0_IRQHandler
+                0x0000046c                WDT_IRQHandler
+                0x0000046c                PIOINT3_IRQHandler
+                0x0000046c                FMC_IRQHandler
  .text.ResetISR
-                0x00000458       0x48 ./src/cr_startup_lpc11.o
-                0x00000458                ResetISR
- .text          0x000004a0        0x0 ./src/eeprom_i2c.o
+                0x00000470       0x48 ./src/cr_startup_lpc11.o
+                0x00000470                ResetISR
+ .text          0x000004b8        0x0 ./src/eeprom_i2c.o
  .text.eeprom_read
-                0x000004a0       0x3c ./src/eeprom_i2c.o
-                0x000004a0                eeprom_read
+                0x000004b8       0x3c ./src/eeprom_i2c.o
+                0x000004b8                eeprom_read
  .text.eeprom_write
-                0x000004dc       0x38 ./src/eeprom_i2c.o
-                0x000004dc                eeprom_write
+                0x000004f4       0x38 ./src/eeprom_i2c.o
+                0x000004f4                eeprom_write
  .text.eeprom_init
-                0x00000514       0x10 ./src/eeprom_i2c.o
-                0x00000514                eeprom_init
- .text          0x00000524        0x0 ./src/i2c.o
+                0x0000052c       0x10 ./src/eeprom_i2c.o
+                0x0000052c                eeprom_init
+ .text          0x0000053c        0x0 ./src/i2c.o
  .text.I2C_IRQHandler
-                0x00000524      0x1a8 ./src/i2c.o
-                0x00000524                I2C_IRQHandler
+                0x0000053c      0x1a8 ./src/i2c.o
+                0x0000053c                I2C_IRQHandler
  .text.I2CStart
-                0x000006cc       0x38 ./src/i2c.o
-                0x000006cc                I2CStart
- .text.I2CStop  0x00000704       0x1c ./src/i2c.o
-                0x00000704                I2CStop
- .text.I2CInit  0x00000720       0x70 ./src/i2c.o
-                0x00000720                I2CInit
+                0x000006e4       0x38 ./src/i2c.o
+                0x000006e4                I2CStart
+ .text.I2CStop  0x0000071c       0x1c ./src/i2c.o
+                0x0000071c                I2CStop
+ .text.I2CInit  0x00000738       0x70 ./src/i2c.o
+                0x00000738                I2CInit
  .text.I2CEngine
-                0x00000790       0x3c ./src/i2c.o
-                0x00000790                I2CEngine
- .text          0x000007cc        0x0 ./src/main.o
- .text.KeyScan  0x000007cc      0x150 ./src/main.o
-                0x000007cc                KeyScan
- .text.main     0x0000091c      0x19c ./src/main.o
-                0x0000091c                main
- .text          0x00000ab8        0x0 ./src/ssp.o
+                0x000007a8       0x3c ./src/i2c.o
+                0x000007a8                I2CEngine
+ .text          0x000007e4        0x0 ./src/main.o
+ .text.KeyScan  0x000007e4      0x150 ./src/main.o
+                0x000007e4                KeyScan
+ .text.main     0x00000934      0x1a0 ./src/main.o
+                0x00000934                main
+ .text          0x00000ad4        0x0 ./src/ssp.o
  .text.SSP_IRQHandler
-                0x00000ab8       0x48 ./src/ssp.o
-                0x00000ab8                SSP_IRQHandler
- .text.SSPInit  0x00000b00       0x7c ./src/ssp.o
-                0x00000b00                SSPInit
- .text.SSPSend  0x00000b7c       0x40 ./src/ssp.o
-                0x00000b7c                SSPSend
- .text.SSPByte  0x00000bbc       0x2c ./src/ssp.o
-                0x00000bbc                SSPByte
+                0x00000ad4       0x48 ./src/ssp.o
+                0x00000ad4                SSP_IRQHandler
+ .text.SSPInit  0x00000b1c       0x7c ./src/ssp.o
+                0x00000b1c                SSPInit
+ .text.SSPSend  0x00000b98       0x40 ./src/ssp.o
+                0x00000b98                SSPSend
+ .text.SSPByte  0x00000bd8       0x2c ./src/ssp.o
+                0x00000bd8                SSPByte
  .text.SSPReceive
-                0x00000be8       0x3c ./src/ssp.o
-                0x00000be8                SSPReceive
- .text          0x00000c24        0x0 ./src/uart.o
+                0x00000c04       0x3c ./src/ssp.o
+                0x00000c04                SSPReceive
+ .text          0x00000c40        0x0 ./src/uart.o
  .text.UART_IRQHandler
-                0x00000c24       0xac ./src/uart.o
-                0x00000c24                UART_IRQHandler
+                0x00000c40       0xac ./src/uart.o
+                0x00000c40                UART_IRQHandler
  .text.ModemInit
-                0x00000cd0       0x28 ./src/uart.o
-                0x00000cd0                ModemInit
+                0x00000cec       0x28 ./src/uart.o
+                0x00000cec                ModemInit
  .text.UARTInit
-                0x00000cf8       0xc4 ./src/uart.o
-                0x00000cf8                UARTInit
+                0x00000d14       0xc4 ./src/uart.o
+                0x00000d14                UARTInit
  .text.UARTSendByte
-                0x00000dbc       0x18 ./src/uart.o
-                0x00000dbc                UARTSendByte
+                0x00000dd8       0x18 ./src/uart.o
+                0x00000dd8                UARTSendByte
  .text.UARTSend
-                0x00000dd4       0x1c ./src/uart.o
-                0x00000dd4                UARTSend
+                0x00000df0       0x1c ./src/uart.o
+                0x00000df0                UARTSend
  .text.UARTRead
-                0x00000df0       0x28 ./src/uart.o
-                0x00000df0                UARTRead
- .text          0x00000e18        0x0 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+                0x00000e0c       0x28 ./src/uart.o
+                0x00000e0c                UARTRead
+ .text          0x00000e34        0x0 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
  .text.SystemCoreClockUpdate
-                0x00000e18      0x14c ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
-                0x00000e18                SystemCoreClockUpdate
+                0x00000e34      0x14c ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+                0x00000e34                SystemCoreClockUpdate
  .text.SystemInit
-                0x00000f64       0x84 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
-                0x00000f64                SystemInit
- .text          0x00000fe8        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00000f80       0x84 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+                0x00000f80                SystemInit
+ .text          0x00001004        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
  .text.__weak_main
-                0x00000fe8       0x14 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x00000fe8                __main
-                0x00000fe8                __weak_main
- .text          0x00000ffc      0x338 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(ctype.o)
-                0x00000ffc                _start_module_ctype
-                0x000010d0                islower
-                0x000011c0                tolower
-                0x00001120                ispunct
-                0x00001148                isspace
-                0x00001328                _end_module_ctype
-                0x00001198                isxdigit
-                0x000012c0                _ctype_init
-                0x00001170                isupper
-                0x00001030                isalpha
-                0x000010a8                isgraph
-                0x00001008                isalnum
-                0x000010f8                isprint
-                0x00001240                _set_ctype_8859
-                0x00001080                isdigit
-                0x00001058                iscntrl
-                0x00001200                toupper
- .text          0x00001334        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+                0x00001004       0x14 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00001004                __main
+                0x00001004                __weak_main
+ .text          0x00001018      0x338 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(ctype.o)
+                0x00001018                _start_module_ctype
+                0x000010ec                islower
+                0x000011dc                tolower
+                0x0000113c                ispunct
+                0x00001164                isspace
+                0x00001344                _end_module_ctype
+                0x000011b4                isxdigit
+                0x000012dc                _ctype_init
+                0x0000118c                isupper
+                0x0000104c                isalpha
+                0x000010c4                isgraph
+                0x00001024                isalnum
+                0x00001114                isprint
+                0x0000125c                _set_ctype_8859
+                0x0000109c                isdigit
+                0x00001074                iscntrl
+                0x0000121c                toupper
+ .text          0x00001350        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
  .text._start_module__init_alloc
-                0x00001334        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
-                0x00001334                _start_module__init_alloc
+                0x00001350        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+                0x00001350                _start_module__init_alloc
  .text._init_alloc
-                0x00001338       0x14 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
-                0x00001338                _init_alloc
+                0x00001354       0x14 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+                0x00001354                _init_alloc
  .text._end_module__init_alloc
-                0x0000134c        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
-                0x0000134c                _end_module__init_alloc
- .text          0x00001350       0x88 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(helpers.o)
-                0x0000137a                __ARM_call_via_r7
-                0x000013bc                __aeabi_uldivmod
-                0x00001376                __ARM_call_via_r5
-                0x0000137e                __ARM_call_via_r9
-                0x0000136e                __ARM_call_via_r1
-                0x00001378                __ARM_call_via_r6
-                0x00001382                __ARM_call_via_r11
-                0x0000137c                __ARM_call_via_r8
-                0x00001372                __ARM_call_via_r3
-                0x0000136c                __ARM_call_via_r0
-                0x00001384                __ARM_call_via_r12
-                0x00001380                __ARM_call_via_r10
-                0x00001394                __aeabi_uidivmod
-                0x00001374                __ARM_call_via_r4
-                0x00001370                __ARM_call_via_r2
-                0x00001386                __aeabi_idivmod
-                0x000013a2                __aeabi_ldivmod
-                0x00001350                __ARM_switch8
- .text          0x000013d8        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001368        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+                0x00001368                _end_module__init_alloc
+ .text          0x0000136c       0x88 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(helpers.o)
+                0x00001396                __ARM_call_via_r7
+                0x000013d8                __aeabi_uldivmod
+                0x00001392                __ARM_call_via_r5
+                0x0000139a                __ARM_call_via_r9
+                0x0000138a                __ARM_call_via_r1
+                0x00001394                __ARM_call_via_r6
+                0x0000139e                __ARM_call_via_r11
+                0x00001398                __ARM_call_via_r8
+                0x0000138e                __ARM_call_via_r3
+                0x00001388                __ARM_call_via_r0
+                0x000013a0                __ARM_call_via_r12
+                0x0000139c                __ARM_call_via_r10
+                0x000013b0                __aeabi_uidivmod
+                0x00001390                __ARM_call_via_r4
+                0x0000138c                __ARM_call_via_r2
+                0x000013a2                __aeabi_idivmod
+                0x000013be                __aeabi_ldivmod
+                0x0000136c                __ARM_switch8
+ .text          0x000013f4        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
  .text.__aeabi_lmul
-                0x000013d8       0x64 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000013d8                __aeabi_lmul
+                0x000013f4       0x64 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000013f4                __aeabi_lmul
  .text.__aeabi_llsl
-                0x0000143c       0x30 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x0000143c                __aeabi_llsl
+                0x00001458       0x30 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001458                __aeabi_llsl
  .text.__aeabi_llsr
-                0x0000146c       0x34 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x0000146c                __aeabi_llsr
+                0x00001488       0x34 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001488                __aeabi_llsr
  .text.__aeabi_lasr
-                0x000014a0       0x34 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000014a0                __aeabi_lasr
+                0x000014bc       0x34 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000014bc                __aeabi_lasr
  .text.__aeabi_lcmp
-                0x000014d4       0x24 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000014d4                __aeabi_lcmp
+                0x000014f0       0x24 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000014f0                __aeabi_lcmp
  .text.__aeabi_ulcmp
-                0x000014f8       0x24 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000014f8                __aeabi_ulcmp
+                0x00001514       0x24 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001514                __aeabi_ulcmp
  .text.__aeabi_uread4
-                0x0000151c       0x18 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x0000151c                __aeabi_uread4
+                0x00001538       0x18 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001538                __aeabi_uread4
  .text.__aeabi_uread8
-                0x00001534       0x34 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001534                __aeabi_uread8
+                0x00001550       0x34 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001550                __aeabi_uread8
  .text.__aeabi_uwrite4
-                0x00001568       0x10 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001568                __aeabi_uwrite4
+                0x00001584       0x10 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001584                __aeabi_uwrite4
  .text.__aeabi_uwrite8
-                0x00001578       0x28 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001578                __aeabi_uwrite8
+                0x00001594       0x28 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001594                __aeabi_uwrite8
  .text.__aeabi_memcpy
-                0x000015a0       0x94 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000015a0                __aeabi_memcpy
+                0x000015bc       0x94 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000015bc                __aeabi_memcpy
  .text.__aeabi_memcpy4
-                0x00001634       0x48 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001634                __aeabi_memcpy4
-                0x00001634                __aeabi_memcpy8
+                0x00001650       0x48 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001650                __aeabi_memcpy4
+                0x00001650                __aeabi_memcpy8
  .text.__aeabi_memmove4
-                0x0000167c       0x68 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x0000167c                __aeabi_memmove8
-                0x0000167c                __aeabi_memmove4
+                0x00001698       0x68 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001698                __aeabi_memmove8
+                0x00001698                __aeabi_memmove4
  .text.__aeabi_memset
-                0x000016e4       0x7c c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000016e4                __aeabi_memset
+                0x00001700       0x7c c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001700                __aeabi_memset
  .text.__aeabi_memset4
-                0x00001760       0x48 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001760                __aeabi_memset8
-                0x00001760                __aeabi_memset4
+                0x0000177c       0x48 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x0000177c                __aeabi_memset8
+                0x0000177c                __aeabi_memset4
  .text.__aeabi_memclr
-                0x000017a8       0x60 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000017a8                __aeabi_memclr
+                0x000017c4       0x60 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000017c4                __aeabi_memclr
  .text.__aeabi_memclr4
-                0x00001808       0x38 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001808                __aeabi_memclr8
-                0x00001808                __aeabi_memclr4
+                0x00001824       0x38 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001824                __aeabi_memclr8
+                0x00001824                __aeabi_memclr4
  .text.__aeabi_idiv0
-                0x00001840        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001840                __aeabi_idiv0
+                0x0000185c        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x0000185c                __aeabi_idiv0
  .text.__bhs_uidivmod
-                0x00001844       0x88 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001844                __bhs_uidivmod
+                0x00001860       0x88 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001860                __bhs_uidivmod
  .text.__aeabi_ldiv0
-                0x000018cc        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000018cc                __aeabi_ldiv0
+                0x000018e8        0x4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000018e8                __aeabi_ldiv0
  .text.__aeabi_memmove
-                0x000018d0       0xb8 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x000018d0                __aeabi_memmove
+                0x000018ec       0xb8 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000018ec                __aeabi_memmove
  .text.__aeabi_idiv
-                0x00001988       0xa4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001988                __aeabi_idiv
+                0x000019a4       0xa4 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x000019a4                __aeabi_idiv
  .text.__aeabi_uidiv
-                0x00001a2c       0x74 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001a2c                __aeabi_uidiv
+                0x00001a48       0x74 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001a48                __aeabi_uidiv
  .text.__bhs_idivmod
-                0x00001aa0       0xb8 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001aa0                __bhs_idivmod
+                0x00001abc       0xb8 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001abc                __bhs_idivmod
  .text.__bhs_uldivmod
-                0x00001b58      0x21c c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001b58                __bhs_uldivmod
+                0x00001b74      0x21c c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001b74                __bhs_uldivmod
  .text.__bhs_ldivmod
-                0x00001d74      0x274 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x00001d74                __bhs_ldivmod
+                0x00001d90      0x274 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x00001d90                __bhs_ldivmod
  *(.rodata*)
  .rodata.I2C_IRQHandler
-                0x00001fe8      0x144 ./src/i2c.o
+                0x00002004      0x144 ./src/i2c.o
  .rodata.fontSet1
-                0x0000212c       0xc9 ./src/main.o
- *fill*         0x000021f5        0x3 00
- .rodata        0x000021f8       0x40 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+                0x00002148       0xc9 ./src/main.o
+ *fill*         0x00002211        0x3 00
+ .rodata        0x00002214       0x40 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
-.glue_7         0x00002238        0x0
+.glue_7         0x00002254        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00002238        0x0
+.glue_7t        0x00002254        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00002238        0x0
+.vfp11_veneer   0x00002254        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00002238        0x0
+.v4_bx          0x00002254        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00002238                __exidx_start = .
+                0x00002254                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002238                __exidx_end = .
-                0x00002238                _etext = .
+                0x00002254                __exidx_end = .
+                0x00002254                _etext = .
 
-.data           0x10000000      0x224 load address 0x00002238
+.data           0x10000000      0x378 load address 0x00002254
                 0x10000000                _data = .
  *(vtable)
  *(.data*)
@@ -368,89 +368,91 @@ END GROUP
  .data          0x10000000        0x0 ./src/eeprom_i2c.o
  .data          0x10000000        0x0 ./src/i2c.o
  .data          0x10000000        0x0 ./src/main.o
- .data.data     0x10000000       0x18 ./src/main.o
+ .data.data     0x10000000      0x100 ./src/main.o
                 0x10000000                data
- .data          0x10000018        0x0 ./src/ssp.o
- .data          0x10000018        0x0 ./src/uart.o
+ .data.lcdtxt   0x10000100       0x6c ./src/main.o
+                0x10000100                lcdtxt
+ .data          0x1000016c        0x0 ./src/ssp.o
+ .data          0x1000016c        0x0 ./src/uart.o
  .data.UARTTxEmpty
-                0x10000018        0x1 ./src/uart.o
-                0x10000018                UARTTxEmpty
- *fill*         0x10000019        0x3 00
- .data          0x1000001c        0x4 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
-                0x1000001c                SystemCoreClock
- .data          0x10000020        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
- .data          0x10000020      0x204 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(ctype.o)
-                0x10000020                __ctype
- .data          0x10000224        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
- .data          0x10000224        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(helpers.o)
- .data          0x10000224        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
-                0x10000224                _edata = .
+                0x1000016c        0x1 ./src/uart.o
+                0x1000016c                UARTTxEmpty
+ *fill*         0x1000016d        0x3 00
+ .data          0x10000170        0x4 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+                0x10000170                SystemCoreClock
+ .data          0x10000174        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+ .data          0x10000174      0x204 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(ctype.o)
+                0x10000174                __ctype
+ .data          0x10000378        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+ .data          0x10000378        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(helpers.o)
+ .data          0x10000378        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x10000378                _edata = .
 
-.bss            0x10000224      0x28c load address 0x0000245c
-                0x10000224                _bss = .
+.bss            0x10000378      0x28c load address 0x000025cc
+                0x10000378                _bss = .
  *(.bss*)
- .bss           0x10000224        0x0 ./src/N3310.o
- .bss           0x10000224        0x0 ./src/cr_startup_lpc11.o
- .bss           0x10000224        0x0 ./src/eeprom_i2c.o
- .bss           0x10000224        0x0 ./src/i2c.o
- .bss.RdIndex   0x10000224        0x4 ./src/i2c.o
-                0x10000224                RdIndex
+ .bss           0x10000378        0x0 ./src/N3310.o
+ .bss           0x10000378        0x0 ./src/cr_startup_lpc11.o
+ .bss           0x10000378        0x0 ./src/eeprom_i2c.o
+ .bss           0x10000378        0x0 ./src/i2c.o
+ .bss.RdIndex   0x10000378        0x4 ./src/i2c.o
+                0x10000378                RdIndex
  .bss.I2CMasterState
-                0x10000228        0x4 ./src/i2c.o
-                0x10000228                I2CMasterState
- .bss.WrIndex   0x1000022c        0x4 ./src/i2c.o
-                0x1000022c                WrIndex
+                0x1000037c        0x4 ./src/i2c.o
+                0x1000037c                I2CMasterState
+ .bss.WrIndex   0x10000380        0x4 ./src/i2c.o
+                0x10000380                WrIndex
  .bss.I2CSlaveState
-                0x10000230        0x4 ./src/i2c.o
-                0x10000230                I2CSlaveState
- .bss.I2CCount  0x10000234        0x4 ./src/i2c.o
-                0x10000234                I2CCount
- .bss           0x10000238        0x0 ./src/main.o
- .bss           0x10000238        0x0 ./src/ssp.o
+                0x10000384        0x4 ./src/i2c.o
+                0x10000384                I2CSlaveState
+ .bss.I2CCount  0x10000388        0x4 ./src/i2c.o
+                0x10000388                I2CCount
+ .bss           0x1000038c        0x0 ./src/main.o
+ .bss           0x1000038c        0x0 ./src/ssp.o
  .bss.interruptRxTimeoutStat
-                0x10000238        0x4 ./src/ssp.o
-                0x10000238                interruptRxTimeoutStat
+                0x1000038c        0x4 ./src/ssp.o
+                0x1000038c                interruptRxTimeoutStat
  .bss.interruptRxStat
-                0x1000023c        0x4 ./src/ssp.o
-                0x1000023c                interruptRxStat
+                0x10000390        0x4 ./src/ssp.o
+                0x10000390                interruptRxStat
  .bss.interruptOverRunStat
-                0x10000240        0x4 ./src/ssp.o
-                0x10000240                interruptOverRunStat
- .bss           0x10000244        0x0 ./src/uart.o
+                0x10000394        0x4 ./src/ssp.o
+                0x10000394                interruptOverRunStat
+ .bss           0x10000398        0x0 ./src/uart.o
  .bss.UARTCount
-                0x10000244        0x4 ./src/uart.o
-                0x10000244                UARTCount
- .bss           0x10000248        0x0 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
- .bss           0x10000248        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
- .bss           0x10000248        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(ctype.o)
- .bss           0x10000248        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
- .bss           0x10000248        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(helpers.o)
- .bss           0x10000248        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
+                0x10000398        0x4 ./src/uart.o
+                0x10000398                UARTCount
+ .bss           0x1000039c        0x0 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+ .bss           0x1000039c        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+ .bss           0x1000039c        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(ctype.o)
+ .bss           0x1000039c        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+ .bss           0x1000039c        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(helpers.o)
+ .bss           0x1000039c        0x0 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/armv6-m\libcr_eabihelpers.a(rtlib.o)
  *(COMMON)
- COMMON         0x10000248      0x1fa ./src/N3310.o
-                0x10000248                LCDfbY
-                0x10000249                LCDfb
-                0x10000441                LCDfbX
- *fill*         0x10000442        0x2 00
- COMMON         0x10000444       0x1c ./src/i2c.o
-                0x10000444                I2CReadLength
-                0x10000448                I2CSlaveBuffer
-                0x10000450                I2CMode
-                0x10000454                I2CMasterBuffer
-                0x1000045c                I2CWriteLength
- COMMON         0x10000460        0x4 ./src/main.o
-                0x10000460                key
- COMMON         0x10000464       0x44 ./src/uart.o
-                0x10000464                UARTBuffer
-                0x100004a4                UARTStatus
- COMMON         0x100004a8        0x8 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
-                0x100004a8                __heaps
-                0x100004ac                __end_of_heap
-                0x100004b0                _ebss = .
+ COMMON         0x1000039c      0x1fa ./src/N3310.o
+                0x1000039c                LCDfbY
+                0x1000039d                LCDfb
+                0x10000595                LCDfbX
+ *fill*         0x10000596        0x2 00
+ COMMON         0x10000598       0x1c ./src/i2c.o
+                0x10000598                I2CReadLength
+                0x1000059c                I2CSlaveBuffer
+                0x100005a4                I2CMode
+                0x100005a8                I2CMasterBuffer
+                0x100005b0                I2CWriteLength
+ COMMON         0x100005b4        0x4 ./src/main.o
+                0x100005b4                key
+ COMMON         0x100005b8       0x44 ./src/uart.o
+                0x100005b8                UARTBuffer
+                0x100005f8                UARTStatus
+ COMMON         0x100005fc        0x8 c:/nxp/lpcxpresso_3.3/tools/bin/../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__init_alloc.o)
+                0x100005fc                __heaps
+                0x10000600                __end_of_heap
+                0x10000604                _ebss = .
 
-.cr_heap        0x100004b0        0x0
-                0x100004b0                end = .
-                0x100004b0                _pvHeapStart = .
+.cr_heap        0x10000604        0x0
+                0x10000604                end = .
+                0x10000604                _pvHeapStart = .
                 0x10002000                _vRamTop = __top_RamLoc8
                 0x10001ff0                _vStackTop = (_vRamTop - 0x10)
 OUTPUT(08_Nokia3310LCD.axf elf32-littlearm)
@@ -465,27 +467,27 @@ OUTPUT(08_Nokia3310LCD.axf elf32-littlearm)
  .debug_abbrev  0x000007ef      0x1de ./src/uart.o
  .debug_abbrev  0x000009cd       0xe0 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
-.debug_info     0x00000000     0x3711
+.debug_info     0x00000000     0x3733
  .debug_info    0x00000000      0x460 ./src/N3310.o
  .debug_info    0x00000460      0x1b0 ./src/cr_startup_lpc11.o
  .debug_info    0x00000610      0x15d ./src/eeprom_i2c.o
  .debug_info    0x0000076d      0xb57 ./src/i2c.o
- .debug_info    0x000012c4      0x8e1 ./src/main.o
- .debug_info    0x00001ba5      0xabc ./src/ssp.o
- .debug_info    0x00002661      0xc13 ./src/uart.o
- .debug_info    0x00003274      0x49d ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+ .debug_info    0x000012c4      0x903 ./src/main.o
+ .debug_info    0x00001bc7      0xabc ./src/ssp.o
+ .debug_info    0x00002683      0xc13 ./src/uart.o
+ .debug_info    0x00003296      0x49d ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000     0x1686
- .debug_line    0x00000000      0x384 ./src/N3310.o
- .debug_line    0x00000384      0x2c9 ./src/cr_startup_lpc11.o
- .debug_line    0x0000064d      0x294 ./src/eeprom_i2c.o
- .debug_line    0x000008e1      0x316 ./src/i2c.o
- .debug_line    0x00000bf7      0x310 ./src/main.o
- .debug_line    0x00000f07      0x2fd ./src/ssp.o
- .debug_line    0x00001204      0x31c ./src/uart.o
- .debug_line    0x00001520      0x166 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000     0x1685
+ .debug_line    0x00000000      0x383 ./src/N3310.o
+ .debug_line    0x00000383      0x2c9 ./src/cr_startup_lpc11.o
+ .debug_line    0x0000064c      0x294 ./src/eeprom_i2c.o
+ .debug_line    0x000008e0      0x316 ./src/i2c.o
+ .debug_line    0x00000bf6      0x310 ./src/main.o
+ .debug_line    0x00000f06      0x2fd ./src/ssp.o
+ .debug_line    0x00001203      0x31c ./src/uart.o
+ .debug_line    0x0000151f      0x166 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
-.debug_macinfo  0x00000000    0x1cc57
+.debug_macinfo  0x00000000    0x1cd77
  .debug_macinfo
                 0x00000000     0x4a30 ./src/N3310.o
  .debug_macinfo
@@ -495,34 +497,34 @@ OUTPUT(08_Nokia3310LCD.axf elf32-littlearm)
  .debug_macinfo
                 0x00009a3f     0x4776 ./src/i2c.o
  .debug_macinfo
-                0x0000e1b5     0x5b8b ./src/main.o
+                0x0000e1b5     0x5cab ./src/main.o
  .debug_macinfo
-                0x00013d40     0x4898 ./src/ssp.o
+                0x00013e60     0x4898 ./src/ssp.o
  .debug_macinfo
-                0x000185d8     0x467f ./src/uart.o
+                0x000186f8     0x467f ./src/uart.o
 
-.debug_frame    0x00000000      0x4dc
- .debug_frame   0x00000000      0x15c ./src/N3310.o
- .debug_frame   0x0000015c       0xb8 ./src/cr_startup_lpc11.o
- .debug_frame   0x00000214       0x58 ./src/eeprom_i2c.o
- .debug_frame   0x0000026c       0x88 ./src/i2c.o
- .debug_frame   0x000002f4       0x54 ./src/main.o
- .debug_frame   0x00000348       0xa0 ./src/ssp.o
- .debug_frame   0x000003e8       0xb0 ./src/uart.o
- .debug_frame   0x00000498       0x44 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+.debug_frame    0x00000000      0x4e0
+ .debug_frame   0x00000000      0x160 ./src/N3310.o
+ .debug_frame   0x00000160       0xb8 ./src/cr_startup_lpc11.o
+ .debug_frame   0x00000218       0x58 ./src/eeprom_i2c.o
+ .debug_frame   0x00000270       0x88 ./src/i2c.o
+ .debug_frame   0x000002f8       0x54 ./src/main.o
+ .debug_frame   0x0000034c       0xa0 ./src/ssp.o
+ .debug_frame   0x000003ec       0xb0 ./src/uart.o
+ .debug_frame   0x0000049c       0x44 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
-.debug_loc      0x00000000      0xc16
- .debug_loc     0x00000000      0x46f ./src/N3310.o
- .debug_loc     0x0000046f      0x115 ./src/cr_startup_lpc11.o
- .debug_loc     0x00000584       0xa9 ./src/eeprom_i2c.o
- .debug_loc     0x0000062d       0xcc ./src/i2c.o
- .debug_loc     0x000006f9       0xbd ./src/main.o
- .debug_loc     0x000007b6      0x188 ./src/ssp.o
- .debug_loc     0x0000093e      0x1cf ./src/uart.o
- .debug_loc     0x00000b0d      0x109 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+.debug_loc      0x00000000      0xc00
+ .debug_loc     0x00000000      0x459 ./src/N3310.o
+ .debug_loc     0x00000459      0x115 ./src/cr_startup_lpc11.o
+ .debug_loc     0x0000056e       0xa9 ./src/eeprom_i2c.o
+ .debug_loc     0x00000617       0xcc ./src/i2c.o
+ .debug_loc     0x000006e3       0xbd ./src/main.o
+ .debug_loc     0x000007a0      0x188 ./src/ssp.o
+ .debug_loc     0x00000928      0x1cf ./src/uart.o
+ .debug_loc     0x00000af7      0x109 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
 .debug_pubnames
-                0x00000000      0x487
+                0x00000000      0x492
  .debug_pubnames
                 0x00000000       0xd5 ./src/N3310.o
  .debug_pubnames
@@ -532,13 +534,13 @@ OUTPUT(08_Nokia3310LCD.axf elf32-littlearm)
  .debug_pubnames
                 0x000001be       0xfa ./src/i2c.o
  .debug_pubnames
-                0x000002b8       0x38 ./src/main.o
+                0x000002b8       0x43 ./src/main.o
  .debug_pubnames
-                0x000002f0       0xa0 ./src/ssp.o
+                0x000002fb       0xa0 ./src/ssp.o
  .debug_pubnames
-                0x00000390       0xa8 ./src/uart.o
+                0x0000039b       0xa8 ./src/uart.o
  .debug_pubnames
-                0x00000438       0x4f ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+                0x00000443       0x4f ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
 .debug_aranges  0x00000000      0x200
  .debug_aranges
@@ -568,7 +570,7 @@ OUTPUT(08_Nokia3310LCD.axf elf32-littlearm)
  .debug_ranges  0x00000160       0x40 ./src/uart.o
  .debug_ranges  0x000001a0       0x20 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000      0xb68
+.debug_str      0x00000000      0xb6f
  .debug_str     0x00000000      0x18f ./src/N3310.o
                                 0x1b6 (size before relaxing)
  .debug_str     0x0000018f       0xbc ./src/cr_startup_lpc11.o
@@ -577,13 +579,13 @@ OUTPUT(08_Nokia3310LCD.axf elf32-littlearm)
                                 0x145 (size before relaxing)
  .debug_str     0x000002bf      0x67a ./src/i2c.o
                                 0x791 (size before relaxing)
- .debug_str     0x00000939       0x2a ./src/main.o
-                                0x4d2 (size before relaxing)
- .debug_str     0x00000963       0x94 ./src/ssp.o
+ .debug_str     0x00000939       0x31 ./src/main.o
+                                0x4d9 (size before relaxing)
+ .debug_str     0x0000096a       0x94 ./src/ssp.o
                                 0x6fb (size before relaxing)
- .debug_str     0x000009f7       0xed ./src/uart.o
+ .debug_str     0x000009fe       0xed ./src/uart.o
                                 0x75a (size before relaxing)
- .debug_str     0x00000ae4       0x84 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
+ .debug_str     0x00000aeb       0x84 ../../lib\libCMSISv1p30_LPC11xx.a(system_LPC11xx.o)
                                 0x340 (size before relaxing)
 
 .comment        0x00000000      0x203
