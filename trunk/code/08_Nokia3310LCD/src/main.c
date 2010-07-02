@@ -15,10 +15,24 @@
 #include "font_ttuf1.h"
 #define BV(X) (1<<X)
 #define __KEY_DEBUG
+//Clear Screen \x01b[2J
+//Set 0,0 \x01b[0;0H
+#define MSG \
+"\x01b[0;0H-----------------------------------------------------------\n\r\
+VIKAS = VIllage Komputing Agricultural System\n\r\
+-----------------------------------------------------------\n\r\
+\r\n\
+Based on LPC1114\r\n\
+\r\n\
+Thanks to NXP... \r\n\
+\r\n\
+boseji\r\n\
+http:\/\/m8051.blogspot.com\r\n"
 
 
-
-uint8_t data[]={"Aum Sri Ganeshay Namh\n\r"};
+//uint8_t data[]={"Aum Sri Ganeshay Namh\n\r"};
+uint8_t data[]={MSG};
+uint8_t lcdtxt[]={"VIKAS -                               VIllage Komputing             Agricultural                     System"};
 uint32_t key;
 void KeyScan();
 int main(void) {
@@ -49,8 +63,9 @@ int main(void) {
 	N3310_fbDot(0,11,1);
 	N3310_fbDot(0,12,1);
 
-	N3310_fbWrite(fontSet1,data);
+	N3310_fbWrite(fontSet1,lcdtxt);
 	N3310_fbDisplay();
+	i=0;
 	while(1)
 	{
 		i++ ;//WDT_Reset();

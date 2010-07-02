@@ -182,6 +182,7 @@ void N3310_fbWrite(const uint8_t* fontSet, uint8_t* buf) {
 		}
 		LCDfbX++;	// char spacing
 
+		if(LCDfbX>=83){LCDfbY+=8;LCDfbX=0;}//Proceed to Next line
 		i++;
 
 		// check if string is in flash/sram and read appropriately
